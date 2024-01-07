@@ -38,4 +38,7 @@
 - docker network ls
 - docker network create [--driver bridge] <network_name>
 
+-  docker compose up
+-  docker compose down
+
 ```
