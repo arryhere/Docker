@@ -43,5 +43,5 @@
     "linesBetweenQueries": 3,
     "reservedWordCase": "upper"
   },
-  "indentRainbow.excludedLanguages": ["jsonc", "json"]
+  "indentRainbow.excludedLanguages": ["jsonc", "json", "javascript", "typescript"]
 }
