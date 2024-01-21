@@ -10,7 +10,7 @@
 - docker container ls [-a --latest --no-trunc -q -s]
 
 - docker image build [-t <image_name:image_tag>] ./
-- docker image build [-t <image_name:image_tag> -f <Dockerfile_name>] ./
+- docker image build [-t <image_name:image_tag> -f <path_to_Dockerfile>] ./
 - docker image build [-t <image_name_1:image_tag_1> -t <image_name_2:image_tag_2>] ./
 
 - docker container run [-d -i -t --rm -p <system_port>:<docker_port> --name <container_name> -e ENV_1=env_1 -e ENV_2=env_2 --network <network_name>] <image_name:image_tag>
