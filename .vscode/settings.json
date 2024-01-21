@@ -2,7 +2,7 @@
   "editor.tabSize": 2,
   "editor.fontSize": 14,
   "editor.renderWhitespace": "trailing",
-  "editor.rulers": [120],
+  "editor.rulers": [140],
   "editor.suggest.selectionMode": "always",
   "editor.codeActionsOnSave": {
     "source.organizeImports.biome": "explicit"
@@ -43,5 +43,5 @@
     "linesBetweenQueries": 3,
     "reservedWordCase": "upper"
   },
-  "indentRainbow.excludedLanguages": ["jsonc", "json", "javascript", "typescript"]
+  "indentRainbow.includedLanguages": ["yaml", "dockercompose"]
 }

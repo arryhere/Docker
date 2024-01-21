@@ -2,7 +2,7 @@
   "$schema": "https://biomejs.dev/schemas/1.5.1/schema.json",
   "files": {
     "ignore": [],
-    "include": ["src", ".vscode"]
+    "include": ["src", "test", "biome.json", ".vscode"]
   },
   "organizeImports": {
     "enabled": true
@@ -12,7 +12,7 @@
     "rules": {
       "recommended": true,
       "suspicious": {
-        "noExplicitAny": "off"
+        "noExplicitAny": "warn"
       }
     }
   },
@@ -21,7 +21,7 @@
     "formatWithErrors": false,
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineWidth": 120
+    "lineWidth": 140
   },
   "javascript": {
     "formatter": {
