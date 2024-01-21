@@ -8,6 +8,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@biomejs/biome": "^1.5.2",
     "express": "^4.18.2"
   }
 }
