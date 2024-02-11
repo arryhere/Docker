@@ -10,4 +10,4 @@ RUN npm i
 # EXPOSE provides metadata to the docker image about the port
 EXPOSE 3005
 
-CMD npm run dev
+CMD [ "npm", "run", "server_1" ]

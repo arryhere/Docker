@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node ./src/server.js"
+    "server_1": "node ./src/server_1.js"
   },
   "license": "ISC",
   "dependencies": {
