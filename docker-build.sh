@@ -20,7 +20,7 @@ elif [ "$2" == "server_2" ]
   then
     echo "Dockerfile.server_2: build start"
 
-    
+    docker compose -f ./docker-compose.server_2.yml up
 
     echo "Dockerfile.server_2: build end"
 
