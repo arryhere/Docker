@@ -9,6 +9,6 @@ app.get('/', (req, res) => {
   res.status(200).json({ message: 'Helllo Docker !' });
 });
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
   console.log(`server listening at: http://${hostname}:${port}`);
 });

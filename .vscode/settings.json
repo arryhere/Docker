@@ -10,6 +10,7 @@
   "editor.formatOnSave": true,
   "explorer.autoReveal": false,
   "explorer.compactFolders": false,
+  "explorer.sortOrder": "type",
   "workbench.editor.enablePreview": true,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 100000000,
