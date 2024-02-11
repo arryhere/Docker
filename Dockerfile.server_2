@@ -1,0 +1,12 @@
+FROM node:20.10-alpine3.19
+
+WORKDIR /app
+
+COPY ./src ./src
+COPY ./package.json ./
+
+RUN npm i
+
+EXPOSE 4000
+
+CMD [ "npm", "run", "server_2" ]

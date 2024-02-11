@@ -1,9 +1,9 @@
-import { Client } from 'pg';
+import pg from 'pg';
 
-export const client = new Client({
-  host: 'pg_host',
+export const client = new pg.Client({
+  host: 'postgres',
   port: 5432,
-  database: 'pg_db',
-  user: 'pg_user',
-  password: 'pg_password',
+  database: 'postgres',
+  user: 'postgres',
+  password: 'postgres',
 });

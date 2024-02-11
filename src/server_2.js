@@ -1,5 +1,5 @@
 import express from 'express';
-import { client } from './db';
+import { client } from './db.js';
 
 const app = express();
 
@@ -7,7 +7,6 @@ const hostname = 'localhost';
 const port = 4000;
 
 app.use(express.json());
-app.use(express.urlencoded());
 
 const pg_client = client;
 
@@ -25,7 +24,7 @@ app.get('/users', async (req, res) => {
 
     res.status(200).json({ message: 'get users success', response: response });
   } catch (error) {
-    res.status(200).json({ message: 'get users failed', response: error });
+    res.status(400).json({ message: 'get users failed', response: error });
   }
 });
 
