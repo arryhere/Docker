@@ -1,0 +1,17 @@
+###
+GET http://localhost:4001/
+
+###
+POST http://localhost:4001/create_table
+
+###
+POST http://localhost:4001/create_user
+Content-Type: application/json
+
+{ 
+  "name": "Arijit", 
+  "age": 24
+}
+
+###
+GET http://localhost:4001/users

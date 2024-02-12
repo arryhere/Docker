@@ -18,7 +18,7 @@ services:
     image: server_2
     build:
       context: ./
-      dockerfile: ./Dockerfile.server_2
+      dockerfile: ./docker/Dockerfile.server_2
     depends_on:
       - db
     ports:
