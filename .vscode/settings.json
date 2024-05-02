@@ -1,6 +1,6 @@
 {
   "editor.tabSize": 2,
-  "editor.fontSize": 14,
+  "editor.fontSize": 12,
   "editor.renderWhitespace": "trailing",
   "editor.rulers": [140],
   "editor.suggest.selectionMode": "always",
@@ -12,7 +12,7 @@
   "explorer.compactFolders": false,
   "explorer.sortOrder": "type",
   "workbench.editor.enablePreview": true,
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.scrollback": 100000000,
   "[json]": {
     "editor.defaultFormatter": "biomejs.biome"

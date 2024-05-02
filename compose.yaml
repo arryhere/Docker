@@ -1,10 +1,8 @@
----
 
-version: "3"
-
+name: compose_server_2
 services:
   db:
-    container_name: "server_2_db"
+    container_name: db
     image: postgres:16.1-alpine3.19
     environment:
       - POSTGRES_PASSWORD=postgres
@@ -14,8 +12,8 @@ services:
       - 5432:5432
 
   app:
-    container_name: "server_2_app"
-    image: server_2
+    container_name: app
+    image: server_2:latest
     build:
       context: ./
       dockerfile: ./docker/Dockerfile.server_2
@@ -23,3 +21,14 @@ services:
       - db
     ports:
       - 4001:4000
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=root@pgadmin.com
+      - PGADMIN_DEFAULT_PASSWORD=password
+    depends_on:
+      - db
+    ports:
+      - 5050:80

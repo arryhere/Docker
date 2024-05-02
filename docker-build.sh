@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-
-
 if [ "$1" == "server_1" ]
 
   then
@@ -20,10 +17,10 @@ elif [ "$2" == "server_2" ]
   then
     echo "Dockerfile.server_2: build start"
 
-    docker compose -f ./docker-compose.server_2.yml up
+    docker compose -f ./compose.yaml up -d --build
 
     echo "Dockerfile.server_2: build end"
 
 else
-  echo "choose a dockerfile"
+  echo "choose a Dockerfile !"
 fi
