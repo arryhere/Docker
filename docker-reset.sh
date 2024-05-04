@@ -10,7 +10,7 @@ docker system prune -a -f
 
 echo "Docker: reset end"
 
+echo "Clearing console"
 sleep 2
 
-echo "Clearing console"
 clear
