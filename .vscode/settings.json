@@ -1,6 +1,6 @@
 {
   "editor.tabSize": 2,
-  "editor.fontSize": 12,
+  "editor.detectIndentation": false,
   "editor.renderWhitespace": "trailing",
   "editor.rulers": [140],
   "editor.suggest.selectionMode": "always",
@@ -12,7 +12,6 @@
   "explorer.compactFolders": false,
   "explorer.sortOrder": "type",
   "workbench.editor.enablePreview": true,
-  "terminal.integrated.fontSize": 12,
   "terminal.integrated.scrollback": 100000000,
   "[json]": {
     "editor.defaultFormatter": "biomejs.biome"
@@ -32,17 +31,26 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
   "[sql]": {
     "editor.defaultFormatter": "mtxr.sqltools"
   },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
   "python.analysis.typeCheckingMode": "off",
-  "liveServer.settings.host": "127.0.0.1",
-  "liveServer.settings.port": 5501,
   "rust-analyzer.linkedProjects": [".\\Cargo.toml"],
   "sqltools.format": {
     "language": "sql",
     "linesBetweenQueries": 3,
     "reservedWordCase": "upper"
   },
-  "indentRainbow.includedLanguages": ["yaml", "dockercompose"]
+  "indentRainbow.includedLanguages": ["yaml", "dockercompose"],
+  "java.settings.url": ".vscode/settings.prefs",
+  "java.configuration.updateBuildConfiguration": "interactive"
 }

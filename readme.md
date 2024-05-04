@@ -41,7 +41,7 @@
 
 - docker container exec [-d -i -t] <container_id> [args]
 
--  docker compose [-f <path_to_dokcer_compose_file>] up
+-  docker compose [-f <path_to_dokcer_compose_file>] up [-d --build]
 -  docker compose [-f <path_to_dokcer_compose_file>] down
 
 ```
