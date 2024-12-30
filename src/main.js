@@ -1,5 +1,5 @@
 import express from 'express';
-import { pg_client, mongodb_client } from './config.js';
+import { mongodb_client, pg_client } from './config.js';
 
 async function main() {
   try {

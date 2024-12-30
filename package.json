@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node ./src/main.js"
+    "dev": "node ./src/main.js",
+    "format": "biome format --write ./src",
+    "lint": "biome lint --write ./src && biome check --write ./src",
+    "pre-commit": "npm run format && npm run lint"
   },
   "license": "ISC",
   "dependencies": {

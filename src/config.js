@@ -1,5 +1,5 @@
-import pg from 'pg';
 import { MongoClient } from 'mongodb';
+import pg from 'pg';
 
 export const pg_client = new pg.Pool({
   host: 'postgres',
