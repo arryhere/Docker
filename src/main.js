@@ -10,6 +10,8 @@ async function main() {
 
     app.use(express.json());
 
+    // pg routes
+
     app.get('/pg', (req, res) => {
       try {
         return res.status(200).json({ success: true, message: 'Hello PG !' });
@@ -71,6 +73,8 @@ async function main() {
         res.status(400).json({ success: false, message: 'pg get users failed', error: error });
       }
     });
+
+    // mongodb routes
 
     app.listen(port, () => {
       console.log(`server listening at: http://${hostname}:${port}`);
