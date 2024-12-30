@@ -1,5 +1,5 @@
 ###
-GET http://localhost:4000/pg
+GET http://localhost:4000/
 
 ###
 POST http://localhost:4000/pg/create_table
@@ -15,3 +15,20 @@ Content-Type: application/json
 
 ###
 GET http://localhost:4000/pg/users
+
+
+
+###
+POST http://localhost:4000/mongo/create_collection
+
+###
+POST http://localhost:4000/mongo/create_user
+Content-Type: application/json
+
+{ 
+  "name": "Arijit", 
+  "age": 24
+}
+
+###
+GET http://localhost:4000/mongo/users

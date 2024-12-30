@@ -1,17 +1,19 @@
 name: compose_node_docker
 services:
-  # pg out container uri     : postgresql://postgres:postgres@localhost:4001/pg_db?schema=public
-  # pg in container uri      : postgresql://postgres:postgres@postgres:5432/pg_db?schema=public
+  # pg out container uri     : postgresql://root:password@localhost:4001/pg_db?schema=public
+  # pg in container uri      : postgresql://root:password@postgres:5432/pg_db?schema=public
   postgres:
-    container_name: db
+    container_name: postgres
     image: postgres:16.1-alpine3.19
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
       POSTGRES_DB: pg_db
     restart: on-failure:3
     ports:
       - 4001:5432
+    volumes:
+      - ./tmp/pg:/var/lib/postgresql/data
 
   pgadmin:
     container_name: pgadmin
@@ -24,6 +26,20 @@ services:
       - postgres
     ports:
       - 4002:80
+
+  mongodb:
+    # mongo out container uri     : mongodb://root:password@localhost:4003/mongo_db?authSource=admin
+    # mongo in container uri      : mongodb://root:password@mongodb:27017/mongo_db?authSource=admin
+    container_name: mongodb
+    image: mongo:latest
+    restart: on-failure:3
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - 4003:27017
+    volumes:
+      - ./tmp/mongodb:/data/db
 
   node_docker:
     container_name: node_docker
