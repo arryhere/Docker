@@ -4,8 +4,8 @@ import { MongoClient } from 'mongodb';
 export const pg_client = new pg.Pool({
   host: 'postgres',
   port: 5432,
-  user: 'postgres',
-  password: 'postgres',
+  user: 'root',
+  password: 'password',
   database: 'pg_db',
 });
 
