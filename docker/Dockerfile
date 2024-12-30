@@ -10,4 +10,4 @@ RUN npm i
 # EXPOSE provides metadata to the docker image about the port
 EXPOSE 4000
 
-CMD [ "npm", "run", "dev" ]
+ENTRYPOINT [ "npm", "run", "dev" ]
