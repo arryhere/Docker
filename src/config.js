@@ -1,9 +1,11 @@
 import pg from 'pg';
 
-export const pool = new pg.Pool({
-  host: 'db',
+export const pg_client = new pg.Pool({
+  host: 'postgres',
   port: 5432,
-  database: 'postgres',
   user: 'postgres',
   password: 'postgres',
+  database: 'pg_db',
 });
+
+

@@ -1,35 +1,38 @@
-
-name: compose_server_2
+name: compose_node_docker
 services:
-  db:
+  # pg out container uri     : postgresql://postgres:postgres@localhost:4001/pg_db?schema=public
+  # pg in container uri      : postgresql://postgres:postgres@postgres:5432/pg_db?schema=public
+  postgres:
     container_name: db
     image: postgres:16.1-alpine3.19
     environment:
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=postgres
-    restart: always
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pg_db
+    restart: on-failure:3
     ports:
-      - 4000:5432
-
-  app:
-    container_name: app
-    image: server_2:latest
-    build:
-      context: ./
-      dockerfile: ./docker/Dockerfile.server_2
-    depends_on:
-      - db
-    ports:
-      - 4001:4000
+      - 4001:5432
 
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
     environment:
-      - PGADMIN_DEFAULT_EMAIL=root@pgadmin.com
-      - PGADMIN_DEFAULT_PASSWORD=password
+      PGADMIN_DEFAULT_EMAIL: root@pgadmin.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    restart: on-failure:3
     depends_on:
-      - db
+      - postgres
     ports:
       - 4002:80
+
+  node_docker:
+    container_name: node_docker
+    image: node_docker:1.0.0
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - 4000:4000

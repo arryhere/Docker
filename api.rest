@@ -1,11 +1,11 @@
 ###
-GET http://localhost:4001/
+GET http://localhost:4000/pg
 
 ###
-POST http://localhost:4001/create_table
+POST http://localhost:4000/pg/create_table
 
 ###
-POST http://localhost:4001/create_user
+POST http://localhost:4000/pg/create_user
 Content-Type: application/json
 
 { 
@@ -14,4 +14,4 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:4001/users
+GET http://localhost:4000/pg/users
